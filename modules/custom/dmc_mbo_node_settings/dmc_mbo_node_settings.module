@@ -1,0 +1,315 @@
+<?php
+
+/**
+ * @file
+ * Contains dmc_mbo_node_settings.module.
+ */
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\user\UserInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\paragraphs\Entity\Paragraph;
+use Drupal\node\Entity\Node;
+use Drupal\field\FieldConfigInterface;
+
+/**
+ * Implements hook_help().
+ */
+function dmc_mbo_node_settings_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the dmc_mbo_node_settings module.
+    case 'help.page.dmc_mbo_node_settings':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Alter or change DMC-MBO node forms.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_presave()
+ */
+function dmc_mbo_node_settings_user_presave_bk(UserInterface $account) {
+  if (!$account->original) {
+    $rid = array_rand(['tpl' => 'TPL', 'gpl' => 'GPL'], 1);
+    $account->addRole($rid);
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_presave()
+ */
+function dmc_mbo_node_settings_node_presave_bk(EntityInterface $node) {
+  if ($node->isNew()) {
+    switch ($node->bundle()) {
+      case 'plant_people_structure':
+
+        $query = \Drupal::database()->select('users', 'u');
+        $query->join('user__roles', 'ur', 'ur.entity_id = u.uid');
+        $query->fields('u', ['uid']);
+        $query->condition('ur.roles_target_id', 'gpl');
+        $query->orderRandom();
+        $query->range(0, 1);
+        $result = $query->execute();
+        $gpl_user = $result->fetchField();
+
+        $node->set("field_user_gpl", $gpl_user);
+
+        break;
+      case 'performance_area_setup':
+
+        $query = \Drupal::database()->select('users', 'u');
+        $query->join('user__roles', 'ur', 'ur.entity_id = u.uid');
+        $query->fields('u', ['uid']);
+        $query->condition('ur.roles_target_id', 'gpl');
+        $query->orderRandom();
+        $query->range(0, 1);
+        $result = $query->execute();
+        $gpl_user = $result->fetchField();
+
+        $node->set("field_user_gpl", $gpl_user);
+
+        break;
+      case 'wc_shift_performance':
+
+        $query = \Drupal::database()->select('users', 'u');
+        $query->join('user__roles', 'ur', 'ur.entity_id = u.uid');
+        $query->fields('u', ['uid']);
+        $query->condition('ur.roles_target_id', 'tpl');
+        $query->orderRandom();
+        $query->range(0, 1);
+        $result = $query->execute();
+        $gpl_user = $result->fetchField();
+
+        $node->set("field_user_tpl", $gpl_user);
+
+        break;
+    }
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_insert() for node entities.
+ */
+function dmc_mbo_node_settings_node_insert_bk(EntityInterface $node) {
+  switch ($node->bundle()) {
+    case 'plant_people_structure':
+
+      $node->set('field_plant_peoples_structure', []);
+
+      for ($i = 0; $i <= mt_rand(5, 10); $i++) {
+        $paragraph = Paragraph::create(['type' => 'plant_peoples']);
+
+        $query = \Drupal::database()->select('users', 'u');
+        $query->join('user__roles', 'ur', 'ur.entity_id = u.uid');
+        $query->fields('u', ['uid']);
+        $query->condition('ur.roles_target_id', 'tpl');
+        $query->orderRandom();
+        $query->range(0, 1);
+        $result = $query->execute();
+        $tpl_user = $result->fetchField();
+
+        $paragraph->set('field_user_tpl', $tpl_user);
+
+        for ($j = 0; $j <= mt_rand(20, 30); $j++) {
+
+          $operator_name = _get_random_string(6);
+
+          $paragraph->field_operator->appendItem($operator_name);
+          //$paragraph->set('field_operator', $operator_name);
+        }
+
+        $paragraph->save();
+
+        $node->field_plant_peoples_structure->appendItem($paragraph);
+      }
+
+      $node->setNewRevision(FALSE);
+      $node->save();
+      break;
+    case 'performance_area_setup':
+
+      $node->set('field_performance_area_work_cent', []);
+
+      for ($i = 0; $i <= mt_rand(5, 10); $i++) {
+        $paragraph = Paragraph::create(['type' => 'performance_area_work_center']);
+
+        $work_center_name = _get_random_string(6);
+        $paragraph->set('field_work_center', $work_center_name);
+
+        $description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
+        $paragraph->set('field_description', $description);
+
+        $cost_center_name = _get_random_string(6);
+        $paragraph->set('field_cost_center', $cost_center_name);
+
+        for ($j = 0; $j <= mt_rand(3, 6); $j++) {
+
+          $kpi_paragraph = Paragraph::create(['type' => 'performance_area_kpi']);
+
+          $query = \Drupal::database()->select('taxonomy_term_data', 'ttd');
+          $query->fields('ttd', ['tid']);
+          $query->condition('ttd.vid', 'cost_kpi');
+          $query->orderRandom();
+          $result = $query->execute();
+          $cost_kpi_tid = $result->fetchField();
+
+          $kpi_paragraph->set('field_cost_kpi', $cost_kpi_tid);
+
+          $kpi_paragraph->set('field_weightage', mt_rand(0, 10));
+
+          $kpi_paragraph->save();
+          $paragraph->field_performance_area_cost_kpi->appendItem($kpi_paragraph);
+        }
+
+        $paragraph->save();
+
+        $node->field_performance_area_work_cent->appendItem($paragraph);
+      }
+      $node->setNewRevision(FALSE);
+      $node->save();
+      break;
+    case 'wc_shift_performance':
+
+      $node->set('field_shift_performance_operator', []);
+      $node->set('field_shift_performance_work_cen', []);
+
+      for ($i = 0; $i <= mt_rand(5, 10); $i++) {
+        $work_centers_paragraph = Paragraph::create(['type' => 'shift_performance_work_centers']);
+
+        $query = \Drupal::database()->select('paragraph__field_work_center', 'pwc');
+        $query->join('node__field_performance_area_work_cent', 'npaw', 'npaw.field_performance_area_work_cent_target_id = pwc.entity_id');
+        $query->fields('pwc', ['field_work_center_value']);
+        $query->condition('pwc.bundle', 'performance_area_work_center');
+        $query->condition('npaw.bundle', 'performance_area_setup');
+        $query->orderRandom();
+        $query->range(0, 1);
+        $result = $query->execute();
+        $work_center_name = $result->fetchField();
+
+        $work_centers_paragraph->set('field_work_center', $work_center_name);
+
+
+        $performance_hours_paragraph = Paragraph::create(['type' => 'shift_performance_hours']);
+
+        $performance_hours_paragraph->set('field_hours', mt_rand(5, 9));
+
+        for ($j = 0; $j <= mt_rand(3, 6); $j++) {
+
+          $performance_kpi_paragraph = Paragraph::create(['type' => 'shift_performance_kpi']);
+
+          $performance_kpi_paragraph->set('field_actual', mt_rand(1, 12));
+          $performance_kpi_paragraph->set('field_target', mt_rand(1, 12));
+
+          $query = \Drupal::database()->select('taxonomy_term_data', 'ttd');
+          $query->fields('ttd', ['tid']);
+          $query->condition('ttd.vid', 'cost_kpi');
+          $query->orderRandom();
+          $result = $query->execute();
+          $cost_kpi_tid = $result->fetchField();
+
+          $performance_kpi_paragraph->set('field_cost_kpi', $cost_kpi_tid);
+
+          $performance_kpi_paragraph->save();
+          $performance_hours_paragraph->field_shift_performance_kpi->appendItem($performance_kpi_paragraph);
+        }
+
+        $performance_hours_paragraph->save();
+
+        $work_centers_paragraph->field_shift_performance_hours->appendItem($performance_hours_paragraph);
+
+        $work_centers_paragraph->save();
+
+        $node->field_shift_performance_work_cen->appendItem($work_centers_paragraph);
+      }
+
+      // Operator data
+      $operator_paragraph = Paragraph::create(['type' => 'shift_performance_operator']);
+
+      $query = \Drupal::database()->select('paragraph__field_operator', 'pfo');
+      $query->join('node__field_plant_peoples_structure', 'npps', 'npps.field_plant_peoples_structure_target_id = pfo.entity_id');
+      $query->fields('pfo', ['field_operator_value']);
+      $query->condition('pfo.bundle', 'plant_peoples');
+      $query->condition('npps.bundle', 'plant_people_structure');
+      $query->orderRandom();
+      $query->range(0, 1);
+      $result = $query->execute();
+      $shift_operator_name = $result->fetchField();
+
+      $operator_paragraph->set('field_shift_operator', $shift_operator_name);
+      $operator_paragraph->set('field_flex_factor', array_rand([0, 1]));
+      $operator_paragraph->set('field_safety_factor', array_rand([0, -1]));
+
+      $plant_action = _get_random_string(6);
+      $operator_paragraph->set('field_tpl_action', $plant_action);
+      $operator_paragraph->set('field_total_hour', mt_rand(1, 12));
+      $operator_paragraph->set('field_remaining_hour', mt_rand(1, 12));
+
+
+      for ($k = 0; $k <= mt_rand(5, 10); $k++) {
+
+          $performance_work_center_paragraph = Paragraph::create(['type' => 'shift_performance_work_center']);
+
+          $performance_work_center_paragraph->set('field_hour', mt_rand(1, 12));
+          $performance_work_center_paragraph->set('field_loan_hours', mt_rand(1, 12));
+
+          $query = \Drupal::database()->select('paragraph__field_work_center', 'pwc');
+          $query->join('node__field_performance_area_work_cent', 'npaw', 'npaw.field_performance_area_work_cent_target_id = pwc.entity_id');
+          $query->fields('pwc', ['field_work_center_value']);
+          $query->condition('pwc.bundle', 'performance_area_work_center');
+          $query->condition('npaw.bundle', 'performance_area_setup');
+          $query->orderRandom();
+          $query->range(0, 1);
+          $result = $query->execute();
+          $work_center_name = $result->fetchField();
+
+          $performance_work_center_paragraph->set('field_work_center', $work_center_name);
+
+          $performance_work_center_paragraph->save();
+          $operator_paragraph->field_shift_performance_work_cen->appendItem($performance_work_center_paragraph);
+        }
+
+
+
+      $operator_paragraph->save();
+
+      $node->field_shift_performance_operator->appendItem($operator_paragraph);
+
+      $node->setNewRevision(FALSE);
+      $node->save();
+      break;
+
+  }
+}
+
+function _get_random_string($no = 6) {
+  $str = str_split('abcdefghijklmnopqrstuvwxyz');
+  shuffle($str);
+  $full_string = '';
+  foreach (array_rand($str, $no) as $k)
+    $full_string .= $str[$k];
+
+  return $full_string;
+}
+
+function dmc_mbo_entity_type_fields($entity, $content_type) {
+  $entity_manager = Drupal::service('entity.manager');
+  $fields = [];
+  if(!empty($content_type)) {
+    $fields = array_filter(
+        $entity_manager->getFieldDefinitions($entity, $content_type), function ($field_definition) {
+            return $field_definition instanceof FieldConfigInterface;
+        }
+    );
+  }
+  return $fields;
+}
+
+function dmc_mbo_node_settings_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'node_wc_shift_performance_edit_form') {
+    // ksm($form);
+  }
+}
+
+

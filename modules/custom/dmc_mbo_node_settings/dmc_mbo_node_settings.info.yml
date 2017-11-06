@@ -1,0 +1,9 @@
+name: DMC-MBO Node settings
+type: module
+description: Alter or change DMC-MBO node forms.\
+core: 8.x
+package: DMC-MBO Custom
+dependencies:
+  - node
+  - taxonomy
+  - views
