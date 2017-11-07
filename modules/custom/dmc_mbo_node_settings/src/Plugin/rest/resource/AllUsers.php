@@ -108,7 +108,8 @@ class AllUsers extends ResourceBase {
     if (count($data) == 0) {
       return new ResourceResponse();
     }
-    return new ResourceResponse($data);
+    $final_data = (array) $data[0];
+    return new ResourceResponse($final_data);
   }
 
 }
