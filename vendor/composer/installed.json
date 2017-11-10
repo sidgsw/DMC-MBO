@@ -1337,7 +1337,7 @@
         "version_normalized": "8.2.12.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/klausi/coder.git",
+            "url": "https://git.drupal.org/project/coder.git",
             "reference": "984c54a7b1e8f27ff1c32348df69712afd86b17f"
         },
         "dist": {
@@ -4817,59 +4817,6 @@
         "description": "implementation of xdg base directory specification for php"
     },
     {
-        "name": "nikic/php-parser",
-        "version": "v3.1.1",
-        "version_normalized": "3.1.1.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/nikic/PHP-Parser.git",
-            "reference": "a1e8e1a30e1352f118feff1a8481066ddc2f234a"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/a1e8e1a30e1352f118feff1a8481066ddc2f234a",
-            "reference": "a1e8e1a30e1352f118feff1a8481066ddc2f234a",
-            "shasum": ""
-        },
-        "require": {
-            "ext-tokenizer": "*",
-            "php": ">=5.5"
-        },
-        "require-dev": {
-            "phpunit/phpunit": "~4.0|~5.0"
-        },
-        "time": "2017-09-02T17:10:46+00:00",
-        "bin": [
-            "bin/php-parse"
-        ],
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "3.0-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "PhpParser\\": "lib/PhpParser"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-3-Clause"
-        ],
-        "authors": [
-            {
-                "name": "Nikita Popov"
-            }
-        ],
-        "description": "A PHP parser written in PHP",
-        "keywords": [
-            "parser",
-            "php"
-        ]
-    },
-    {
         "name": "symfony/var-dumper",
         "version": "v3.3.10",
         "version_normalized": "3.3.10.0",
@@ -5003,81 +4950,6 @@
         ],
         "description": "Symfony Console Component",
         "homepage": "https://symfony.com"
-    },
-    {
-        "name": "psy/psysh",
-        "version": "v0.8.13",
-        "version_normalized": "0.8.13.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/bobthecow/psysh.git",
-            "reference": "cdb5593c3684bab74e10fcfffe4a0c8d1c39695d"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/bobthecow/psysh/zipball/cdb5593c3684bab74e10fcfffe4a0c8d1c39695d",
-            "reference": "cdb5593c3684bab74e10fcfffe4a0c8d1c39695d",
-            "shasum": ""
-        },
-        "require": {
-            "dnoegel/php-xdg-base-dir": "0.1",
-            "jakub-onderka/php-console-highlighter": "0.3.*",
-            "nikic/php-parser": "~1.3|~2.0|~3.0",
-            "php": ">=5.3.9",
-            "symfony/console": "~2.3.10|^2.4.2|~3.0",
-            "symfony/var-dumper": "~2.7|~3.0"
-        },
-        "require-dev": {
-            "friendsofphp/php-cs-fixer": "~1.11",
-            "hoa/console": "~3.16|~1.14",
-            "phpunit/phpunit": "~4.4|~5.0",
-            "symfony/finder": "~2.1|~3.0"
-        },
-        "suggest": {
-            "ext-pcntl": "Enabling the PCNTL extension makes PsySH a lot happier :)",
-            "ext-pdo-sqlite": "The doc command requires SQLite to work.",
-            "ext-posix": "If you have PCNTL, you'll want the POSIX extension as well.",
-            "ext-readline": "Enables support for arrow-key history navigation, and showing and manipulating command history.",
-            "hoa/console": "A pure PHP readline implementation. You'll want this if your PHP install doesn't already support readline or libedit."
-        },
-        "time": "2017-10-19T06:13:20+00:00",
-        "bin": [
-            "bin/psysh"
-        ],
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-develop": "0.8.x-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "files": [
-                "src/Psy/functions.php"
-            ],
-            "psr-4": {
-                "Psy\\": "src/Psy/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Justin Hileman",
-                "email": "justin@justinhileman.info",
-                "homepage": "http://justinhileman.com"
-            }
-        ],
-        "description": "An interactive shell for modern PHP.",
-        "homepage": "http://psysh.org",
-        "keywords": [
-            "REPL",
-            "console",
-            "interactive",
-            "shell"
-        ]
     },
     {
         "name": "gabordemooij/redbean",
@@ -5262,45 +5134,6 @@
             }
         ],
         "description": "A robust cross-platform utility for normalizing, comparing and modifying file paths."
-    },
-    {
-        "name": "webflo/drupal-finder",
-        "version": "1.0.0",
-        "version_normalized": "1.0.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/webflo/drupal-finder.git",
-            "reference": "3216448cc347bc77127fa3bf6497ba9b3c296e9c"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/webflo/drupal-finder/zipball/3216448cc347bc77127fa3bf6497ba9b3c296e9c",
-            "reference": "3216448cc347bc77127fa3bf6497ba9b3c296e9c",
-            "shasum": ""
-        },
-        "require-dev": {
-            "mikey179/vfsstream": "^1.6",
-            "phpunit/phpunit": "^4.8"
-        },
-        "time": "2017-08-08T08:31:26+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "classmap": [
-                "src/DrupalFinder.php"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "Florian Weber",
-                "email": "florian@webflo.org"
-            }
-        ],
-        "description": "Helper class to locate a Drupal installation from a given path."
     },
     {
         "name": "symfony/process",
@@ -6255,5 +6088,290 @@
             "issues": "http://drupal.org/project/devel",
             "irc": "irc://irc.freenode.org/drupal-contribute"
         }
+    },
+    {
+        "name": "drupal/migrate_plus",
+        "version": "2.0.0-beta2",
+        "version_normalized": "2.0.0.0-beta2",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupal.org/project/migrate_plus",
+            "reference": "8.x-2.0-beta2"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/migrate_plus-8.x-2.0-beta2.zip",
+            "reference": "8.x-2.0-beta2",
+            "shasum": "0b29113a3c00c7ab3ba73e811da3450edca4c0bb"
+        },
+        "require": {
+            "drupal/core": "^8.1"
+        },
+        "require-dev": {
+            "drupal/migrate_example_advanced_setup": "*",
+            "drupal/migrate_example_setup": "*"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-2.x": "2.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-2.0-beta2",
+                "datestamp": "1476307439",
+                "security-coverage": {
+                    "status": "not-covered",
+                    "message": "Beta releases are not covered by Drupal security advisories."
+                }
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "Mike Ryan",
+                "homepage": "https://www.drupal.org/u/mikeryan",
+                "role": "Maintainer"
+            },
+            {
+                "name": "mikeryan",
+                "homepage": "https://www.drupal.org/user/4420"
+            }
+        ],
+        "description": "Enhancements to core migration support.",
+        "homepage": "https://www.drupal.org/project/migrate_plus",
+        "support": {
+            "source": "https://cgit.drupalcode.org/migrate_plus",
+            "issues": "https://www.drupal.org/project/issues/migrate_plus",
+            "irc": "irc://irc.freenode.org/drupal-migrate"
+        }
+    },
+    {
+        "name": "drupal/migrate_tools",
+        "version": "2.0.0-beta1",
+        "version_normalized": "2.0.0.0-beta1",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupal.org/project/migrate_tools",
+            "reference": "8.x-2.0-beta1"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/migrate_tools-8.x-2.0-beta1.zip",
+            "reference": "8.x-2.0-beta1",
+            "shasum": "bf823a9d08d08b99d5ea1469729b30f9969ef519"
+        },
+        "require": {
+            "drupal/core": "^8.1",
+            "drupal/migrate_plus": "*"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-2.x": "2.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-2.0-beta1",
+                "datestamp": "1476313439",
+                "security-coverage": {
+                    "status": "not-covered",
+                    "message": "Beta releases are not covered by Drupal security advisories."
+                }
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "heddn",
+                "homepage": "https://www.drupal.org/user/1463982"
+            },
+            {
+                "name": "mikeryan",
+                "homepage": "https://www.drupal.org/user/4420"
+            },
+            {
+                "name": "moshe weitzman",
+                "homepage": "https://www.drupal.org/user/23"
+            }
+        ],
+        "description": "Tools to assist in developing and running migrations.",
+        "homepage": "https://www.drupal.org/project/migrate_tools",
+        "support": {
+            "source": "http://cgit.drupalcode.org/migrate_tools"
+        }
+    },
+    {
+        "name": "nikic/php-parser",
+        "version": "v3.1.2",
+        "version_normalized": "3.1.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/nikic/PHP-Parser.git",
+            "reference": "08131e7ff29de6bb9f12275c7d35df71f25f4d89"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/08131e7ff29de6bb9f12275c7d35df71f25f4d89",
+            "reference": "08131e7ff29de6bb9f12275c7d35df71f25f4d89",
+            "shasum": ""
+        },
+        "require": {
+            "ext-tokenizer": "*",
+            "php": ">=5.5"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~4.0|~5.0"
+        },
+        "time": "2017-11-04T11:48:34+00:00",
+        "bin": [
+            "bin/php-parse"
+        ],
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.0-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "PhpParser\\": "lib/PhpParser"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Nikita Popov"
+            }
+        ],
+        "description": "A PHP parser written in PHP",
+        "keywords": [
+            "parser",
+            "php"
+        ]
+    },
+    {
+        "name": "psy/psysh",
+        "version": "v0.8.14",
+        "version_normalized": "0.8.14.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/bobthecow/psysh.git",
+            "reference": "91e53c16560bdb8b9592544bb38429ae00d6baee"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/bobthecow/psysh/zipball/91e53c16560bdb8b9592544bb38429ae00d6baee",
+            "reference": "91e53c16560bdb8b9592544bb38429ae00d6baee",
+            "shasum": ""
+        },
+        "require": {
+            "dnoegel/php-xdg-base-dir": "0.1",
+            "jakub-onderka/php-console-highlighter": "0.3.*",
+            "nikic/php-parser": "~1.3|~2.0|~3.0",
+            "php": ">=5.3.9",
+            "symfony/console": "~2.3.10|^2.4.2|~3.0",
+            "symfony/var-dumper": "~2.7|~3.0"
+        },
+        "require-dev": {
+            "friendsofphp/php-cs-fixer": "~1.11",
+            "hoa/console": "~3.16|~1.14",
+            "phpunit/phpunit": "~4.4|~5.0",
+            "symfony/finder": "~2.1|~3.0"
+        },
+        "suggest": {
+            "ext-pcntl": "Enabling the PCNTL extension makes PsySH a lot happier :)",
+            "ext-pdo-sqlite": "The doc command requires SQLite to work.",
+            "ext-posix": "If you have PCNTL, you'll want the POSIX extension as well.",
+            "ext-readline": "Enables support for arrow-key history navigation, and showing and manipulating command history.",
+            "hoa/console": "A pure PHP readline implementation. You'll want this if your PHP install doesn't already support readline or libedit."
+        },
+        "time": "2017-11-04T16:06:49+00:00",
+        "bin": [
+            "bin/psysh"
+        ],
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-develop": "0.8.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "src/Psy/functions.php"
+            ],
+            "psr-4": {
+                "Psy\\": "src/Psy/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Justin Hileman",
+                "email": "justin@justinhileman.info",
+                "homepage": "http://justinhileman.com"
+            }
+        ],
+        "description": "An interactive shell for modern PHP.",
+        "homepage": "http://psysh.org",
+        "keywords": [
+            "REPL",
+            "console",
+            "interactive",
+            "shell"
+        ]
+    },
+    {
+        "name": "webflo/drupal-finder",
+        "version": "1.1.0",
+        "version_normalized": "1.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/webflo/drupal-finder.git",
+            "reference": "8a7886c575d6eaa67a425dceccc84e735c0b9637"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/webflo/drupal-finder/zipball/8a7886c575d6eaa67a425dceccc84e735c0b9637",
+            "reference": "8a7886c575d6eaa67a425dceccc84e735c0b9637",
+            "shasum": ""
+        },
+        "require-dev": {
+            "mikey179/vfsstream": "^1.6",
+            "phpunit/phpunit": "^4.8"
+        },
+        "time": "2017-10-24T08:12:11+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "src/DrupalFinder.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "Florian Weber",
+                "email": "florian@webflo.org"
+            }
+        ],
+        "description": "Helper class to locate a Drupal installation from a given path."
     }
 ]

@@ -1,0 +1,38 @@
+id: wc_shift_performance
+label: WC Shift Performance
+migration_group: DMC_MBO_Migrate
+source:
+  plugin: dmc_mbo_wcshift_performance_source_migrate
+  key: migrate
+destination:
+  plugin: entity:node
+process:
+  type:
+    plugin: default_value
+    default_value: wc_shift_performance
+    
+  title: title_new
+    
+  field_select_date:
+    plugin: default_value
+    default_value: 1508839289
+      
+  field_user_tpl:
+    plugin: default_value
+    default_value: 2733
+    
+  field_select_shift:
+    plugin: default_value
+    default_value: 19
+      
+  field_shift_performance_operator: 
+    - source: paragraphs
+      plugin: dmc_mbo_wcshift_performance_operator_process_migrate
+      
+  field_shift_performance_work_cen: 
+    - source: paragraphs
+      plugin: dmc_mbo_wcshift_performance_work_process_migrate
+    
+  uid:
+    plugin: default_value
+    default_value: 1
