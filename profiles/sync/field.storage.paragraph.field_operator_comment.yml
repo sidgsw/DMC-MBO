@@ -1,0 +1,19 @@
+uuid: a8a9608d-1a85-4b11-90d0-49bdc7327407
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_operator_comment
+field_name: field_operator_comment
+entity_type: paragraph
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

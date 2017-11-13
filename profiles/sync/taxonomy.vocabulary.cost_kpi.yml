@@ -1,0 +1,9 @@
+uuid: 8ae6c7e4-fe4b-4cd6-b8eb-a340a3819ec1
+langcode: en
+status: true
+dependencies: {  }
+name: 'Cost KPI'
+vid: cost_kpi
+description: 'Cost KPI'
+hierarchy: 1
+weight: 0

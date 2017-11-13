@@ -1,0 +1,9 @@
+uuid: 3f8b1588-8a13-4bc1-8cd9-a2d1050766d6
+langcode: en
+status: true
+dependencies: {  }
+id: shift_performance_hours
+label: 'Shift Performance Hours'
+icon_uuid: null
+description: 'Shift Performance Hours'
+behavior_plugins: {  }

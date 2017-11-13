@@ -1,0 +1,9 @@
+uuid: 45128696-5bd5-4bcf-af28-4754315719af
+langcode: en
+status: true
+dependencies: {  }
+id: plant_peoples
+label: 'Plant Peoples'
+icon_uuid: null
+description: 'Plant Peoples Details'
+behavior_plugins: {  }

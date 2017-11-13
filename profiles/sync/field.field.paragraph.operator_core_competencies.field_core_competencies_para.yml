@@ -1,0 +1,58 @@
+uuid: 06cedff5-adbb-4894-b00c-e52c8354eebb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_core_competencies_para
+    - paragraphs.paragraphs_type.core_competencies
+    - paragraphs.paragraphs_type.operator_core_competencies
+  module:
+    - entity_reference_revisions
+id: paragraph.operator_core_competencies.field_core_competencies_para
+field_name: field_core_competencies_para
+entity_type: paragraph
+bundle: operator_core_competencies
+label: 'Core Competencies Para'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      core_competencies: core_competencies
+    target_bundles_drag_drop:
+      core_competencies:
+        enabled: true
+        weight: 11
+      operator_core_competencies:
+        weight: 12
+        enabled: false
+      performance_area_kpi:
+        weight: 13
+        enabled: false
+      performance_area_work_center:
+        weight: 14
+        enabled: false
+      plant_peoples:
+        weight: 15
+        enabled: false
+      shift_performance_hours:
+        weight: 16
+        enabled: false
+      shift_performance_kpi:
+        weight: 17
+        enabled: false
+      shift_performance_operator:
+        weight: 18
+        enabled: false
+      shift_performance_work_center:
+        weight: 19
+        enabled: false
+      shift_performance_work_centers:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions

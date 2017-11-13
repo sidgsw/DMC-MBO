@@ -1,0 +1,28 @@
+uuid: d3df60a5-dba9-4d88-ad27-9006e7b33189
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_single_operator
+    - node.type.operator
+    - paragraphs.paragraphs_type.attendance_update
+id: paragraph.attendance_update.field_single_operator
+field_name: field_single_operator
+entity_type: paragraph
+bundle: attendance_update
+label: Operator
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      operator: operator
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,49 @@
+uuid: 9a4cd930-507e-4ede-b250-bd62343669ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_shift_performance_operator
+    - node.type.wc_shift_performance
+    - paragraphs.paragraphs_type.shift_performance_operator
+  module:
+    - entity_reference_revisions
+id: node.wc_shift_performance.field_shift_performance_operator
+field_name: field_shift_performance_operator
+entity_type: node
+bundle: wc_shift_performance
+label: 'Shift Performance Operator'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      shift_performance_operator: shift_performance_operator
+    target_bundles_drag_drop:
+      performance_area_kpi:
+        weight: 8
+        enabled: false
+      performance_area_work_center:
+        weight: 9
+        enabled: false
+      plant_peoples:
+        weight: 10
+        enabled: false
+      shift_performance_hours:
+        weight: 11
+        enabled: false
+      shift_performance_kpi:
+        weight: 12
+        enabled: false
+      shift_performance_operator:
+        enabled: true
+        weight: 13
+      shift_performance_work_centers:
+        weight: 14
+        enabled: false
+field_type: entity_reference_revisions

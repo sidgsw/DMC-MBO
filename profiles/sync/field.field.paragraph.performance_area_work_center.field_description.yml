@@ -1,0 +1,19 @@
+uuid: af472a6d-89c3-4210-82e3-4a45a358ea68
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.performance_area_work_center
+id: paragraph.performance_area_work_center.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: performance_area_work_center
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

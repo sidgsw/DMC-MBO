@@ -1,0 +1,43 @@
+uuid: beaa7222-16d3-4d87-809e-c782077299cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.shift_performance_kpi.field_actual
+    - field.field.paragraph.shift_performance_kpi.field_cost_kpi
+    - field.field.paragraph.shift_performance_kpi.field_target
+    - paragraphs.paragraphs_type.shift_performance_kpi
+id: paragraph.shift_performance_kpi.default
+targetEntityType: paragraph
+bundle: shift_performance_kpi
+mode: default
+content:
+  field_actual:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_cost_kpi:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_target:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,21 @@
+uuid: 760eaac8-b58c-46ab-bec0-9194f275d269
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_month
+    - node.type.attendance_ratings_update
+  module:
+    - options
+id: node.attendance_ratings_update.field_month
+field_name: field_month
+entity_type: node
+bundle: attendance_ratings_update
+label: Month
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

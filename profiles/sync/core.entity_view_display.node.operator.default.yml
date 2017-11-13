@@ -1,0 +1,35 @@
+uuid: 3b649471-9125-423c-b731-839080c0f83d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.operator.body
+    - field.field.node.operator.field_operator_id
+    - node.type.operator
+  module:
+    - text
+    - user
+id: node.operator.default
+targetEntityType: node
+bundle: operator
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_operator_id:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

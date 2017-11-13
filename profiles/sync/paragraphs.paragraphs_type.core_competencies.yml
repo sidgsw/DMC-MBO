@@ -1,0 +1,9 @@
+uuid: 5807db8e-5493-4f30-a44f-b6efecec60f3
+langcode: en
+status: true
+dependencies: {  }
+id: core_competencies
+label: 'Core Competencies'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

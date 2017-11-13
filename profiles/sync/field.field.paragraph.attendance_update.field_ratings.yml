@@ -1,0 +1,21 @@
+uuid: dc0d3cb8-20f0-427a-a369-4564386be694
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ratings
+    - paragraphs.paragraphs_type.attendance_update
+  module:
+    - options
+id: paragraph.attendance_update.field_ratings
+field_name: field_ratings
+entity_type: paragraph
+bundle: attendance_update
+label: 'Attendance Ratings'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

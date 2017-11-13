@@ -1,0 +1,21 @@
+uuid: a9917ca9-c7c8-4573-b840-e1a28a245ba4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_safety_ratings
+    - node.type.monthly_quality_and_safety_updat
+  module:
+    - options
+id: node.monthly_quality_and_safety_updat.field_safety_ratings
+field_name: field_safety_ratings
+entity_type: node
+bundle: monthly_quality_and_safety_updat
+label: Safety
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,37 @@
+uuid: 5f553238-b56d-4fe9-9c1b-85c678f0a4bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.performance_area_setup.field_performance_area_work_cent
+    - field.field.node.performance_area_setup.field_user_gpl
+    - node.type.performance_area_setup
+  module:
+    - entity_reference_revisions
+    - user
+id: node.performance_area_setup.default
+targetEntityType: node
+bundle: performance_area_setup
+mode: default
+content:
+  field_performance_area_work_cent:
+    type: entity_reference_revisions_entity_view
+    weight: 102
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_user_gpl:
+    weight: 101
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

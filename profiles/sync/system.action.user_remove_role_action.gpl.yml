@@ -1,0 +1,14 @@
+uuid: 73669645-5473-49bc-afca-e564c651b665
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.gpl
+  module:
+    - user
+id: user_remove_role_action.gpl
+label: 'Remove the GPL role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: gpl

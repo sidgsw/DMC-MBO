@@ -1,0 +1,21 @@
+uuid: 7027c638-fd90-49c8-ad16-cfcf73e8c20a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_year
+    - node.type.attendance_ratings_update
+  module:
+    - options
+id: node.attendance_ratings_update.field_year
+field_name: field_year
+entity_type: node
+bundle: attendance_ratings_update
+label: Year
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

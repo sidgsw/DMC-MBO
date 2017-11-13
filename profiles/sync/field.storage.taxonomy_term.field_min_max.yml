@@ -1,0 +1,27 @@
+uuid: f5f1488a-a1b0-4591-889a-e60cfb625e0c
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - taxonomy
+id: taxonomy_term.field_min_max
+field_name: field_min_max
+entity_type: taxonomy_term
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: MIN
+      label: MIN
+    -
+      value: MAX
+      label: MAX
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

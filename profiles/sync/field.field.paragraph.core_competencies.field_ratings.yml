@@ -1,0 +1,21 @@
+uuid: f5e15469-3b80-444a-9ce8-c42a81ddac65
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ratings
+    - paragraphs.paragraphs_type.core_competencies
+  module:
+    - options
+id: paragraph.core_competencies.field_ratings
+field_name: field_ratings
+entity_type: paragraph
+bundle: core_competencies
+label: Score
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

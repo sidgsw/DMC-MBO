@@ -1,0 +1,9 @@
+uuid: 66713304-c7dc-4806-a659-a7a47c9bb162
+langcode: en
+status: true
+dependencies: {  }
+id: operator_core_competencies
+label: 'Operator Core Competencies'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

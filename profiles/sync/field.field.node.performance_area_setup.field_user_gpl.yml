@@ -1,0 +1,28 @@
+uuid: cf1e0177-e107-45a1-9e75-dde296aaed0f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_user_gpl
+    - node.type.performance_area_setup
+id: node.performance_area_setup.field_user_gpl
+field_name: field_user_gpl
+entity_type: node
+bundle: performance_area_setup
+label: 'GPL Name'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

@@ -1,0 +1,21 @@
+uuid: 5bc97d94-a88c-4085-8106-cd817ad12162
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_week
+    - node.type.weekly_core_competency
+  module:
+    - options
+id: node.weekly_core_competency.field_week
+field_name: field_week
+entity_type: node
+bundle: weekly_core_competency
+label: Week
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

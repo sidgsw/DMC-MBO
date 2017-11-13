@@ -1,0 +1,18 @@
+uuid: fb25769c-25d4-4538-bc5d-f04aa9aed976
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - dmc_mbo_node_settings
+    - serialization
+id: weekly_core_competencies_import
+plugin_id: weekly_core_competencies_import
+granularity: resource
+configuration:
+  methods:
+    - POST
+  formats:
+    - json
+  authentication:
+    - basic_auth

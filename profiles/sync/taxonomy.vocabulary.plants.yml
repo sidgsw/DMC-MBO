@@ -1,0 +1,9 @@
+uuid: 2ef02167-4bc6-4b79-90e4-4d2bee0ac8ec
+langcode: en
+status: true
+dependencies: {  }
+name: Plants
+vid: plants
+description: 'Plants detail'
+hierarchy: 0
+weight: 0

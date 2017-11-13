@@ -1,0 +1,50 @@
+uuid: 10ad9443-eeb0-4d21-aa81-f2a14afab5c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.monthly_quality_and_safety_updat.field_month
+    - field.field.node.monthly_quality_and_safety_updat.field_quality_ratings
+    - field.field.node.monthly_quality_and_safety_updat.field_safety_ratings
+    - field.field.node.monthly_quality_and_safety_updat.field_year
+    - node.type.monthly_quality_and_safety_updat
+  module:
+    - options
+    - user
+id: node.monthly_quality_and_safety_updat.default
+targetEntityType: node
+bundle: monthly_quality_and_safety_updat
+mode: default
+content:
+  field_month:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_quality_ratings:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_safety_ratings:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_year:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

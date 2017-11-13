@@ -1,0 +1,58 @@
+uuid: f06445bd-d48e-45a3-96b8-52bec4d0ebaf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_core_competencies_details
+    - node.type.weekly_core_competency
+    - paragraphs.paragraphs_type.operator_core_competencies
+  module:
+    - entity_reference_revisions
+id: node.weekly_core_competency.field_core_competencies_details
+field_name: field_core_competencies_details
+entity_type: node
+bundle: weekly_core_competency
+label: 'Core Competencies Details'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      operator_core_competencies: operator_core_competencies
+    target_bundles_drag_drop:
+      core_competencies:
+        weight: 11
+        enabled: false
+      operator_core_competencies:
+        enabled: true
+        weight: 12
+      performance_area_kpi:
+        weight: 13
+        enabled: false
+      performance_area_work_center:
+        weight: 14
+        enabled: false
+      plant_peoples:
+        weight: 15
+        enabled: false
+      shift_performance_hours:
+        weight: 16
+        enabled: false
+      shift_performance_kpi:
+        weight: 17
+        enabled: false
+      shift_performance_operator:
+        weight: 18
+        enabled: false
+      shift_performance_work_center:
+        weight: 19
+        enabled: false
+      shift_performance_work_centers:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions

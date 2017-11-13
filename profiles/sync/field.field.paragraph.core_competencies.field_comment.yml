@@ -1,0 +1,19 @@
+uuid: aee3b356-f49f-4a28-acd0-cc61c48c06d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_comment
+    - paragraphs.paragraphs_type.core_competencies
+id: paragraph.core_competencies.field_comment
+field_name: field_comment
+entity_type: paragraph
+bundle: core_competencies
+label: Comment
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,21 @@
+uuid: a6da6c97-ab37-4544-8219-d91e920d9ce7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_quality_ratings
+    - node.type.monthly_quality_and_safety_updat
+  module:
+    - options
+id: node.monthly_quality_and_safety_updat.field_quality_ratings
+field_name: field_quality_ratings
+entity_type: node
+bundle: monthly_quality_and_safety_updat
+label: Quality
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,23 @@
+uuid: e5745c57-fa85-48ad-9843-3944a5551c0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_year
+    - node.type.weekly_core_competency
+  module:
+    - options
+id: node.weekly_core_competency.field_year
+field_name: field_year
+entity_type: node
+bundle: weekly_core_competency
+label: Year
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '2017'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

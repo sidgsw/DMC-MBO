@@ -1,0 +1,24 @@
+uuid: 1707eb78-d1ea-45e9-b8fd-4a687567c55a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.weekly_core_competency.field_core_competencies_details
+    - field.field.node.weekly_core_competency.field_week
+    - field.field.node.weekly_core_competency.field_year
+    - node.type.weekly_core_competency
+  module:
+    - user
+id: node.weekly_core_competency.teaser
+targetEntityType: node
+bundle: weekly_core_competency
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_core_competencies_details: true
+  field_week: true
+  field_year: true

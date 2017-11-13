@@ -1,0 +1,30 @@
+uuid: 38bc7809-34a2-485a-9839-62a7ea602355
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.cost_kpi.field_min_max
+    - taxonomy.vocabulary.cost_kpi
+  module:
+    - options
+    - text
+id: taxonomy_term.cost_kpi.default
+targetEntityType: taxonomy_term
+bundle: cost_kpi
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_min_max:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden: {  }

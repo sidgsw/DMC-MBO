@@ -1,0 +1,39 @@
+uuid: c1bd3979-c163-4be6-b715-a87c7fd13c75
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.shift_performance_work_centers.field_shift_performance_hours
+    - field.field.paragraph.shift_performance_work_centers.field_work_center
+    - paragraphs.paragraphs_type.shift_performance_work_centers
+  module:
+    - paragraphs
+id: paragraph.shift_performance_work_centers.default
+targetEntityType: paragraph
+bundle: shift_performance_work_centers
+mode: default
+content:
+  field_shift_performance_hours:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_work_center:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

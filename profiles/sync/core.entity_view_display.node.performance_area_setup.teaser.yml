@@ -1,0 +1,18 @@
+uuid: 5ecd3f74-09c2-40e1-a802-4a4dd262c73f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.performance_area_setup
+  module:
+    - user
+id: node.performance_area_setup.teaser
+targetEntityType: node
+bundle: performance_area_setup
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden: {  }

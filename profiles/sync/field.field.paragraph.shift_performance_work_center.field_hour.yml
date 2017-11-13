@@ -1,0 +1,19 @@
+uuid: d8442090-2cb0-462c-8fe2-5168c4220ec1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_hour
+    - paragraphs.paragraphs_type.shift_performance_work_center
+id: paragraph.shift_performance_work_center.field_hour
+field_name: field_hour
+entity_type: paragraph
+bundle: shift_performance_work_center
+label: Hour
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,29 @@
+uuid: 1b8b05ef-1ce5-4d46-9c14-ce09212c0da2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_select_shift
+    - node.type.wc_shift_performance
+    - taxonomy.vocabulary.shift_structure
+id: node.wc_shift_performance.field_select_shift
+field_name: field_select_shift
+entity_type: node
+bundle: wc_shift_performance
+label: 'Select Shift'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      shift_structure: shift_structure
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

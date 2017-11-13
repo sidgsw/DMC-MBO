@@ -1,0 +1,41 @@
+uuid: 1421890f-1847-4bbe-994f-735ea0ecb89a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.attendance_update.field_comment
+    - field.field.paragraph.attendance_update.field_ratings
+    - field.field.paragraph.attendance_update.field_single_operator
+    - paragraphs.paragraphs_type.attendance_update
+id: paragraph.attendance_update.default
+targetEntityType: paragraph
+bundle: attendance_update
+mode: default
+content:
+  field_comment:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_ratings:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_single_operator:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

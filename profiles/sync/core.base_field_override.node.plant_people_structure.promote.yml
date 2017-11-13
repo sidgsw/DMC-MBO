@@ -1,0 +1,22 @@
+uuid: 95fba3ca-832f-40bc-9150-54cf25cb44c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.plant_people_structure
+id: node.plant_people_structure.promote
+field_name: promote
+entity_type: node
+bundle: plant_people_structure
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,52 @@
+uuid: 516128b6-65a9-4b25-99df-debfa0bad9bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_shift_performance_work_cen
+    - paragraphs.paragraphs_type.shift_performance_operator
+    - paragraphs.paragraphs_type.shift_performance_work_center
+  module:
+    - entity_reference_revisions
+id: paragraph.shift_performance_operator.field_shift_performance_work_cen
+field_name: field_shift_performance_work_cen
+entity_type: paragraph
+bundle: shift_performance_operator
+label: 'Shift Performance Work Center Operator'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      shift_performance_work_center: shift_performance_work_center
+    target_bundles_drag_drop:
+      performance_area_kpi:
+        weight: 9
+        enabled: false
+      performance_area_work_center:
+        weight: 10
+        enabled: false
+      plant_peoples:
+        weight: 11
+        enabled: false
+      shift_performance_hours:
+        weight: 12
+        enabled: false
+      shift_performance_kpi:
+        weight: 13
+        enabled: false
+      shift_performance_operator:
+        weight: 14
+        enabled: false
+      shift_performance_work_center:
+        enabled: true
+        weight: 15
+      shift_performance_work_centers:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

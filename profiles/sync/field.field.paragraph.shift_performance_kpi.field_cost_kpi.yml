@@ -1,0 +1,29 @@
+uuid: 9e38243f-9a33-4aa6-aed7-5ce2fa8ed83f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cost_kpi
+    - paragraphs.paragraphs_type.shift_performance_kpi
+    - taxonomy.vocabulary.cost_kpi
+id: paragraph.shift_performance_kpi.field_cost_kpi
+field_name: field_cost_kpi
+entity_type: paragraph
+bundle: shift_performance_kpi
+label: 'Cost KPI'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      cost_kpi: cost_kpi
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

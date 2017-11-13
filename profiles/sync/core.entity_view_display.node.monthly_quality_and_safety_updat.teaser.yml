@@ -1,0 +1,18 @@
+uuid: 154f2ecb-1f80-485d-8d14-0c61a001cc75
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.monthly_quality_and_safety_updat
+  module:
+    - user
+id: node.monthly_quality_and_safety_updat.teaser
+targetEntityType: node
+bundle: monthly_quality_and_safety_updat
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden: {  }

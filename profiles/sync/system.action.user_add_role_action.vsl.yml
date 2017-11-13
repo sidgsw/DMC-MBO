@@ -1,0 +1,14 @@
+uuid: ac5178fa-a554-4ce0-b088-282e7e79eb57
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.vsl
+  module:
+    - user
+id: user_add_role_action.vsl
+label: 'Add the VSL role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: vsl

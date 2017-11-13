@@ -1,0 +1,21 @@
+uuid: 6dbca18f-956e-4626-ae6b-c4dbca1edb7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_month
+    - node.type.monthly_quality_and_safety_updat
+  module:
+    - options
+id: node.monthly_quality_and_safety_updat.field_month
+field_name: field_month
+entity_type: node
+bundle: monthly_quality_and_safety_updat
+label: Month
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

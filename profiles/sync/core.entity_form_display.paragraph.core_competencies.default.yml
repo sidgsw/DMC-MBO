@@ -1,0 +1,38 @@
+uuid: 018dc4bc-4c13-4046-b084-787572236d18
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.core_competencies.field_comment
+    - field.field.paragraph.core_competencies.field_core_competencies_link
+    - field.field.paragraph.core_competencies.field_ratings
+    - paragraphs.paragraphs_type.core_competencies
+id: paragraph.core_competencies.default
+targetEntityType: paragraph
+bundle: core_competencies
+mode: default
+content:
+  field_comment:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_core_competencies_link:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_ratings:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

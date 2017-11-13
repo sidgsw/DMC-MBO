@@ -1,0 +1,61 @@
+uuid: 6f8438ad-0238-464b-b2af-82b37e33c3dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_attendance_ratings_para
+    - node.type.attendance_ratings_update
+    - paragraphs.paragraphs_type.attendance_update
+  module:
+    - entity_reference_revisions
+id: node.attendance_ratings_update.field_attendance_ratings_para
+field_name: field_attendance_ratings_para
+entity_type: node
+bundle: attendance_ratings_update
+label: 'Attendance Ratings Para'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      attendance_update: attendance_update
+    target_bundles_drag_drop:
+      attendance_update:
+        enabled: true
+        weight: 12
+      core_competencies:
+        weight: 13
+        enabled: false
+      operator_core_competencies:
+        weight: 14
+        enabled: false
+      performance_area_kpi:
+        weight: 15
+        enabled: false
+      performance_area_work_center:
+        weight: 16
+        enabled: false
+      plant_peoples:
+        weight: 17
+        enabled: false
+      shift_performance_hours:
+        weight: 18
+        enabled: false
+      shift_performance_kpi:
+        weight: 19
+        enabled: false
+      shift_performance_operator:
+        weight: 20
+        enabled: false
+      shift_performance_work_center:
+        weight: 21
+        enabled: false
+      shift_performance_work_centers:
+        weight: 22
+        enabled: false
+field_type: entity_reference_revisions

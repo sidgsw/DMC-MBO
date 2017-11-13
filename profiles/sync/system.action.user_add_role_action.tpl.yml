@@ -1,0 +1,14 @@
+uuid: 1c0c29db-37eb-4ea0-a23c-62b702b5a358
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.tpl
+  module:
+    - user
+id: user_add_role_action.tpl
+label: 'Add the TPL role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: tpl

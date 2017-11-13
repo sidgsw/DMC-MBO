@@ -1,0 +1,9 @@
+uuid: 4a114467-a4e8-4212-afab-cb2df40b4cfc
+langcode: en
+status: true
+dependencies: {  }
+id: gpl
+label: GPL
+weight: 3
+is_admin: null
+permissions: {  }

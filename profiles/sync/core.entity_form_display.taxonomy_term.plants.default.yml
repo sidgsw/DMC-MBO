@@ -1,0 +1,31 @@
+uuid: a45f0b2e-e4a4-4e90-a903-4dd30e753179
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.plants
+  module:
+    - text
+id: taxonomy_term.plants.default
+targetEntityType: taxonomy_term
+bundle: plants
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+      rows: 5
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  path: true

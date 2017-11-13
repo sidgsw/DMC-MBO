@@ -1,0 +1,41 @@
+uuid: 3a7bc57e-0547-4c6f-b683-1853ad703277
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.operator_core_competencies.field_core_competencies_para
+    - field.field.paragraph.operator_core_competencies.field_operator_comment
+    - field.field.paragraph.operator_core_competencies.field_single_operator
+    - paragraphs.paragraphs_type.operator_core_competencies
+  module:
+    - entity_reference_revisions
+id: paragraph.operator_core_competencies.default
+targetEntityType: paragraph
+bundle: operator_core_competencies
+mode: default
+content:
+  field_core_competencies_para:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_operator_comment:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_single_operator:
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

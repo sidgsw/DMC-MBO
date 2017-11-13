@@ -1,0 +1,18 @@
+uuid: f8ccf710-57d4-4bf0-8206-5d45898b74f0
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - dmc_mbo_node_settings
+    - serialization
+id: operator_details
+plugin_id: operator_details
+granularity: resource
+configuration:
+  methods:
+    - POST
+  formats:
+    - json
+  authentication:
+    - basic_auth

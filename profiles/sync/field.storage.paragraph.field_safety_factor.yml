@@ -1,0 +1,27 @@
+uuid: 87b5e38f-8985-4a69-b6e4-50eb6804e354
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_safety_factor
+field_name: field_safety_factor
+entity_type: paragraph
+type: list_integer
+settings:
+  allowed_values:
+    -
+      value: -1
+      label: '-1'
+    -
+      value: 0
+      label: '0'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

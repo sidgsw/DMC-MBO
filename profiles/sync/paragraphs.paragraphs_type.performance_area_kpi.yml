@@ -1,0 +1,9 @@
+uuid: 266cf09f-1050-4d98-a933-57e02bdbc935
+langcode: en
+status: true
+dependencies: {  }
+id: performance_area_kpi
+label: 'Performance area KPI'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

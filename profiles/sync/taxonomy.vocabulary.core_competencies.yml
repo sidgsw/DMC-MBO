@@ -1,0 +1,9 @@
+uuid: 7de2bb94-374e-4c44-99fa-e2cc001c70b1
+langcode: en
+status: true
+dependencies: {  }
+name: 'Core Competencies'
+vid: core_competencies
+description: ''
+hierarchy: 0
+weight: 0
