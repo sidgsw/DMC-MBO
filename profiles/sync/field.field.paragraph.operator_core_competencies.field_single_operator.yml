@@ -1,0 +1,28 @@
+uuid: a21a3571-1583-4adb-8f23-16f5314dad12
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_single_operator
+    - node.type.operator
+    - paragraphs.paragraphs_type.operator_core_competencies
+id: paragraph.operator_core_competencies.field_single_operator
+field_name: field_single_operator
+entity_type: paragraph
+bundle: operator_core_competencies
+label: 'Single Operator'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      operator: operator
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,30 @@
+uuid: 6dfb3450-7f76-4dce-a536-c06474ae1880
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.shift_structure.field_shift_duration
+    - taxonomy.vocabulary.shift_structure
+  module:
+    - options
+    - text
+id: taxonomy_term.shift_structure.default
+targetEntityType: taxonomy_term
+bundle: shift_structure
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_shift_duration:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden: {  }

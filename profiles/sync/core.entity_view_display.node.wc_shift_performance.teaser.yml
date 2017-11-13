@@ -1,0 +1,18 @@
+uuid: c6a82da4-3b66-4797-831f-509e2bacd95b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.wc_shift_performance
+  module:
+    - user
+id: node.wc_shift_performance.teaser
+targetEntityType: node
+bundle: wc_shift_performance
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden: {  }

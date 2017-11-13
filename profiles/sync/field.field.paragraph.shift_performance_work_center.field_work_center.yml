@@ -1,0 +1,19 @@
+uuid: c5f12b87-ae89-4734-9eec-e543af437c2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_work_center
+    - paragraphs.paragraphs_type.shift_performance_work_center
+id: paragraph.shift_performance_work_center.field_work_center
+field_name: field_work_center
+entity_type: paragraph
+bundle: shift_performance_work_center
+label: 'Work Center'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,21 @@
+uuid: 9c1aa0c0-8d6f-46cd-b6cf-b159bcf55989
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_weightage
+field_name: field_weightage
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

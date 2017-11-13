@@ -1,0 +1,21 @@
+uuid: 855e8ac9-1e0c-48cb-86eb-b4571acb4c46
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_year
+    - node.type.monthly_quality_and_safety_updat
+  module:
+    - options
+id: node.monthly_quality_and_safety_updat.field_year
+field_name: field_year
+entity_type: node
+bundle: monthly_quality_and_safety_updat
+label: Year
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

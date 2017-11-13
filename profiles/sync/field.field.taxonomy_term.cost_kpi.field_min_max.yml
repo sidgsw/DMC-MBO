@@ -1,0 +1,21 @@
+uuid: 47f06544-3a5b-4346-8f5e-801c815b6eb3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_min_max
+    - taxonomy.vocabulary.cost_kpi
+  module:
+    - options
+id: taxonomy_term.cost_kpi.field_min_max
+field_name: field_min_max
+entity_type: taxonomy_term
+bundle: cost_kpi
+label: 'Select Min/Max'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

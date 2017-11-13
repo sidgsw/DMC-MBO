@@ -1,0 +1,37 @@
+uuid: 4b9a0fb1-ffcc-497e-85fc-95d143e78b5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.plant_people_structure.field_plant_peoples_structure
+    - field.field.node.plant_people_structure.field_user_gpl
+    - node.type.plant_people_structure
+  module:
+    - entity_reference_revisions
+    - user
+id: node.plant_people_structure.default
+targetEntityType: node
+bundle: plant_people_structure
+mode: default
+content:
+  field_plant_peoples_structure:
+    type: entity_reference_revisions_entity_view
+    weight: 102
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_user_gpl:
+    weight: 101
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

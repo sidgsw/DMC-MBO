@@ -1,0 +1,29 @@
+uuid: 8cba6f2b-9627-4d0e-af0f-bcdd67c91faa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_core_competencies_link
+    - paragraphs.paragraphs_type.core_competencies
+    - taxonomy.vocabulary.core_competencies
+id: paragraph.core_competencies.field_core_competencies_link
+field_name: field_core_competencies_link
+entity_type: paragraph
+bundle: core_competencies
+label: 'Core Competencies Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      core_competencies: core_competencies
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

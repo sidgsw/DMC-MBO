@@ -1,0 +1,35 @@
+uuid: 6b07d92a-b6ac-4b6b-8568-7ec05a963530
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.plant_peoples.field_operator
+    - field.field.paragraph.plant_peoples.field_user_tpl
+    - paragraphs.paragraphs_type.plant_peoples
+id: paragraph.plant_peoples.default
+targetEntityType: paragraph
+bundle: plant_peoples
+mode: default
+content:
+  field_operator:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_user_tpl:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

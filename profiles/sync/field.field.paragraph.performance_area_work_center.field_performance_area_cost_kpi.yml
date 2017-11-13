@@ -1,0 +1,37 @@
+uuid: e35d2224-efc3-4264-afb9-b38dcfad9ef4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_performance_area_cost_kpi
+    - paragraphs.paragraphs_type.performance_area_kpi
+    - paragraphs.paragraphs_type.performance_area_work_center
+  module:
+    - entity_reference_revisions
+id: paragraph.performance_area_work_center.field_performance_area_cost_kpi
+field_name: field_performance_area_cost_kpi
+entity_type: paragraph
+bundle: performance_area_work_center
+label: 'Performance area Cost KPI'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      performance_area_kpi: performance_area_kpi
+    target_bundles_drag_drop:
+      performance_area_kpi:
+        enabled: true
+        weight: 4
+      performance_area_work_center:
+        weight: 5
+        enabled: false
+      plant_peoples:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

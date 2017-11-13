@@ -1,0 +1,30 @@
+uuid: 6b3fb88c-d98d-4252-95c2-981e293d1784
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_plant
+    - taxonomy.vocabulary.plants
+  module:
+    - user
+id: user.user.field_plant
+field_name: field_plant
+entity_type: user
+bundle: user
+label: Plant
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      plants: plants
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

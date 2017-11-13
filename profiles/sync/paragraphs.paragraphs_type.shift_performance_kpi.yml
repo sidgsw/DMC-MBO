@@ -1,0 +1,9 @@
+uuid: f49ebaa6-a006-4f0f-a6c1-819a54a15d99
+langcode: en
+status: true
+dependencies: {  }
+id: shift_performance_kpi
+label: 'Shift Performance KPI'
+icon_uuid: null
+description: 'Shift Performance KPI'
+behavior_plugins: {  }

@@ -1,0 +1,18 @@
+uuid: b1dc2540-3894-4f7b-8584-559ad026d8f4
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - dmc_mbo_node_settings
+    - serialization
+id: shift_operator_import
+plugin_id: shift_operator_import
+granularity: resource
+configuration:
+  methods:
+    - POST
+  formats:
+    - json
+  authentication:
+    - basic_auth

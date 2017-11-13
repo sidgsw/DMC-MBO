@@ -1,0 +1,34 @@
+uuid: e8931882-4824-49b1-8db5-94332edbbb0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.performance_area_kpi.field_cost_kpi
+    - field.field.paragraph.performance_area_kpi.field_weightage
+    - paragraphs.paragraphs_type.performance_area_kpi
+id: paragraph.performance_area_kpi.default
+targetEntityType: paragraph
+bundle: performance_area_kpi
+mode: default
+content:
+  field_cost_kpi:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_weightage:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

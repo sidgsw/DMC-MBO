@@ -1,0 +1,45 @@
+uuid: ba569de8-e5fd-49ca-98e3-e6227e663ed2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.attendance_ratings_update.field_attendance_ratings_para
+    - field.field.node.attendance_ratings_update.field_month
+    - field.field.node.attendance_ratings_update.field_year
+    - node.type.attendance_ratings_update
+  module:
+    - entity_reference_revisions
+    - options
+    - user
+id: node.attendance_ratings_update.default
+targetEntityType: node
+bundle: attendance_ratings_update
+mode: default
+content:
+  field_attendance_ratings_para:
+    type: entity_reference_revisions_entity_view
+    weight: 103
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_month:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_year:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

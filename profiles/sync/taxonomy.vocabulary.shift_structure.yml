@@ -1,0 +1,9 @@
+uuid: c3cb7fbd-373c-455c-be98-f376682f64a9
+langcode: en
+status: true
+dependencies: {  }
+name: 'Shift Structure'
+vid: shift_structure
+description: 'Shift Structure'
+hierarchy: 1
+weight: 0

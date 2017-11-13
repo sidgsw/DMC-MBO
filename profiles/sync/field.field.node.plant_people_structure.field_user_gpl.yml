@@ -1,0 +1,28 @@
+uuid: 555948f6-f173-462a-8949-ed1c9387d6a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_user_gpl
+    - node.type.plant_people_structure
+id: node.plant_people_structure.field_user_gpl
+field_name: field_user_gpl
+entity_type: node
+bundle: plant_people_structure
+label: 'GPL Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

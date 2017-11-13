@@ -1,0 +1,17 @@
+uuid: d09aebd4-1f55-4df2-9604-1bb24b69094f
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Performance area Setup'
+type: performance_area_setup
+description: 'Performance area Setup'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

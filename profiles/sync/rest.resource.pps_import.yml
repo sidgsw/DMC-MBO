@@ -1,0 +1,18 @@
+uuid: ae2c5b7e-f878-400a-ae53-219f92195293
+langcode: en
+status: true
+dependencies:
+  module:
+    - basic_auth
+    - dmc_mbo_node_settings
+    - serialization
+id: pps_import
+plugin_id: pps_import
+granularity: resource
+configuration:
+  methods:
+    - POST
+  formats:
+    - json
+  authentication:
+    - basic_auth

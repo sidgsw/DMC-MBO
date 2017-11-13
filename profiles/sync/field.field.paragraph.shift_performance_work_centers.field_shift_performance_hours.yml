@@ -1,0 +1,46 @@
+uuid: be98acb1-86e8-4da9-8055-ca9479fbb3bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_shift_performance_hours
+    - paragraphs.paragraphs_type.shift_performance_hours
+    - paragraphs.paragraphs_type.shift_performance_work_centers
+  module:
+    - entity_reference_revisions
+id: paragraph.shift_performance_work_centers.field_shift_performance_hours
+field_name: field_shift_performance_hours
+entity_type: paragraph
+bundle: shift_performance_work_centers
+label: 'Shift Performance Hours'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      shift_performance_hours: shift_performance_hours
+    target_bundles_drag_drop:
+      performance_area_kpi:
+        weight: 7
+        enabled: false
+      performance_area_work_center:
+        weight: 8
+        enabled: false
+      plant_peoples:
+        weight: 9
+        enabled: false
+      shift_performance_hours:
+        enabled: true
+        weight: 10
+      shift_performance_kpi:
+        weight: 11
+        enabled: false
+      shift_performance_work_centers:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,17 @@
+uuid: b17b88e0-9710-4c94-92d4-7fc528dcc6d2
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'WC Shift Performance'
+type: wc_shift_performance
+description: 'WC Shift Performance'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

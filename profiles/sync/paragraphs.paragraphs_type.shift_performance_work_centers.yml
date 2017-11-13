@@ -1,0 +1,9 @@
+uuid: f2fd859c-b8d1-4ca7-8458-892107aa54f1
+langcode: en
+status: true
+dependencies: {  }
+id: shift_performance_work_centers
+label: 'Shift Performance Work Centers'
+icon_uuid: null
+description: 'Shift Performance Work Centers'
+behavior_plugins: {  }

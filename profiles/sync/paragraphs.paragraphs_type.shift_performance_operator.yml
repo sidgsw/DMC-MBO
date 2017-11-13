@@ -1,0 +1,9 @@
+uuid: de4b93ab-1ea0-4f0b-9e91-3c22b8367b01
+langcode: en
+status: true
+dependencies: {  }
+id: shift_performance_operator
+label: 'Shift Performance Operator'
+icon_uuid: null
+description: 'Shift Performance Operator'
+behavior_plugins: {  }

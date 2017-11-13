@@ -1,0 +1,22 @@
+uuid: 3a77fd3e-3b3c-4246-8957-f1a5a7debcc3
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.wc_shift_performance
+id: node.wc_shift_performance.promote
+field_name: promote
+entity_type: node
+bundle: wc_shift_performance
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

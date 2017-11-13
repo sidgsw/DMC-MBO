@@ -1,0 +1,39 @@
+uuid: 77f3244e-057f-4b25-8356-122bc80627a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.shift_performance_work_center.field_hour
+    - field.field.paragraph.shift_performance_work_center.field_loan_hours
+    - field.field.paragraph.shift_performance_work_center.field_work_center
+    - paragraphs.paragraphs_type.shift_performance_work_center
+id: paragraph.shift_performance_work_center.default
+targetEntityType: paragraph
+bundle: shift_performance_work_center
+mode: default
+content:
+  field_hour:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_loan_hours:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_work_center:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

@@ -1,0 +1,50 @@
+uuid: 2ea30ccd-f410-4424-b60a-8ae4b1d9bb69
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.performance_area_work_center.field_cost_center
+    - field.field.paragraph.performance_area_work_center.field_description
+    - field.field.paragraph.performance_area_work_center.field_performance_area_cost_kpi
+    - field.field.paragraph.performance_area_work_center.field_work_center
+    - paragraphs.paragraphs_type.performance_area_work_center
+  module:
+    - entity_reference_revisions
+id: paragraph.performance_area_work_center.default
+targetEntityType: paragraph
+bundle: performance_area_work_center
+mode: default
+content:
+  field_cost_center:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_description:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_performance_area_cost_kpi:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_work_center:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

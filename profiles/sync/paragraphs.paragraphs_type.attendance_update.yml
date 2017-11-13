@@ -1,0 +1,9 @@
+uuid: c42fcfd1-0fa9-48b4-b33b-e95cdac82c8a
+langcode: en
+status: true
+dependencies: {  }
+id: attendance_update
+label: 'Attendance Update'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,45 @@
+uuid: 5ed10eda-cc7d-444e-b4dc-686ce45d6cb1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.weekly_core_competency.field_core_competencies_details
+    - field.field.node.weekly_core_competency.field_week
+    - field.field.node.weekly_core_competency.field_year
+    - node.type.weekly_core_competency
+  module:
+    - entity_reference_revisions
+    - options
+    - user
+id: node.weekly_core_competency.default
+targetEntityType: node
+bundle: weekly_core_competency
+mode: default
+content:
+  field_core_competencies_details:
+    type: entity_reference_revisions_entity_view
+    weight: 104
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_week:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_year:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

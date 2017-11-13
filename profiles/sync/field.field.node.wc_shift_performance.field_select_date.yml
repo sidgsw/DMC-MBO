@@ -1,0 +1,21 @@
+uuid: 362ccf8f-5825-4c96-8149-1002241e00de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_select_date
+    - node.type.wc_shift_performance
+id: node.wc_shift_performance.field_select_date
+field_name: field_select_date
+entity_type: node
+bundle: wc_shift_performance
+label: 'Select Date'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 1508839289
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

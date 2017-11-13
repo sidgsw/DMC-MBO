@@ -1,0 +1,9 @@
+uuid: 9dc1656c-1c4c-4ca9-8197-2ad80f5d9b08
+langcode: en
+status: true
+dependencies: {  }
+id: performance_area_work_center
+label: 'Performance area Work Center'
+icon_uuid: null
+description: 'Performance area Work Center'
+behavior_plugins: {  }

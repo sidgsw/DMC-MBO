@@ -1,0 +1,43 @@
+uuid: ba9b46aa-0811-440e-8661-90280250af51
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_shift_performance_kpi
+    - paragraphs.paragraphs_type.shift_performance_hours
+    - paragraphs.paragraphs_type.shift_performance_kpi
+  module:
+    - entity_reference_revisions
+id: paragraph.shift_performance_hours.field_shift_performance_kpi
+field_name: field_shift_performance_kpi
+entity_type: paragraph
+bundle: shift_performance_hours
+label: 'Shift Performance KPI'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      shift_performance_kpi: shift_performance_kpi
+    target_bundles_drag_drop:
+      performance_area_kpi:
+        weight: 6
+        enabled: false
+      performance_area_work_center:
+        weight: 7
+        enabled: false
+      plant_peoples:
+        weight: 8
+        enabled: false
+      shift_performance_hours:
+        weight: 9
+        enabled: false
+      shift_performance_kpi:
+        enabled: true
+        weight: 10
+field_type: entity_reference_revisions

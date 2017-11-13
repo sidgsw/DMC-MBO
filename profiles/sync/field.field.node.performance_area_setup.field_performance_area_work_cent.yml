@@ -1,0 +1,37 @@
+uuid: 885191e2-36a0-4d24-baa0-c90fc0a7efac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_performance_area_work_cent
+    - node.type.performance_area_setup
+    - paragraphs.paragraphs_type.performance_area_work_center
+  module:
+    - entity_reference_revisions
+id: node.performance_area_setup.field_performance_area_work_cent
+field_name: field_performance_area_work_cent
+entity_type: node
+bundle: performance_area_setup
+label: 'Performance area Work Centers'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      performance_area_work_center: performance_area_work_center
+    target_bundles_drag_drop:
+      performance_area_kpi:
+        weight: 4
+        enabled: false
+      performance_area_work_center:
+        enabled: true
+        weight: 5
+      plant_peoples:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

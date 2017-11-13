@@ -1,0 +1,19 @@
+uuid: b7b4a5bd-a96b-4171-82d2-27ea0714443d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tpl_action
+    - paragraphs.paragraphs_type.shift_performance_operator
+id: paragraph.shift_performance_operator.field_tpl_action
+field_name: field_tpl_action
+entity_type: paragraph
+bundle: shift_performance_operator
+label: 'TPL Action'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

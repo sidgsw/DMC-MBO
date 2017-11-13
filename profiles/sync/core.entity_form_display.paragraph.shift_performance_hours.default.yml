@@ -1,0 +1,39 @@
+uuid: 8f220149-a424-4fc3-8f97-5380bd62cf1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.shift_performance_hours.field_hours
+    - field.field.paragraph.shift_performance_hours.field_shift_performance_kpi
+    - paragraphs.paragraphs_type.shift_performance_hours
+  module:
+    - paragraphs
+id: paragraph.shift_performance_hours.default
+targetEntityType: paragraph
+bundle: shift_performance_hours
+mode: default
+content:
+  field_hours:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_shift_performance_kpi:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

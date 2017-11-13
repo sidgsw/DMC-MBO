@@ -1,0 +1,21 @@
+uuid: 270e54e1-345d-4557-9b98-272ab852c426
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_shift_duration
+    - taxonomy.vocabulary.shift_structure
+  module:
+    - options
+id: taxonomy_term.shift_structure.field_shift_duration
+field_name: field_shift_duration
+entity_type: taxonomy_term
+bundle: shift_structure
+label: 'Shift Duration'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

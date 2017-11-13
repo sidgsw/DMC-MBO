@@ -1,0 +1,14 @@
+uuid: 2f1f4ad0-21c8-43d0-9f7b-b8b0ccb311c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.tpl
+  module:
+    - user
+id: user_remove_role_action.tpl
+label: 'Remove the TPL role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: tpl

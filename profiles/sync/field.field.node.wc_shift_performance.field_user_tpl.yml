@@ -1,0 +1,28 @@
+uuid: fc11eb59-3fcf-4155-831e-5e801bb2bd7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_user_tpl
+    - node.type.wc_shift_performance
+id: node.wc_shift_performance.field_user_tpl
+field_name: field_user_tpl
+entity_type: node
+bundle: wc_shift_performance
+label: 'Select TPL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

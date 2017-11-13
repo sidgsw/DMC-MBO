@@ -1,0 +1,31 @@
+uuid: 1ea638a4-07e9-4419-a780-3a34f0a13bd2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_plant_peoples_structure
+    - node.type.plant_people_structure
+    - paragraphs.paragraphs_type.plant_peoples
+  module:
+    - entity_reference_revisions
+id: node.plant_people_structure.field_plant_peoples_structure
+field_name: field_plant_peoples_structure
+entity_type: node
+bundle: plant_people_structure
+label: 'Plant Peoples Structure'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      plant_peoples: plant_peoples
+    target_bundles_drag_drop:
+      plant_peoples:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions
